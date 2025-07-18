@@ -7,6 +7,7 @@ import {
   useSpring,
   MotionValue,
 } from "motion/react";
+import Link from "next/link";
 
 export function HeroParallaxDemo() {
   return <HeroParallax products={products} />;
@@ -15,75 +16,73 @@ export const products = [
   {
     title: "Cheapfaretravel",
     thumbnail: "/images/cft.png",
+    link: "http://localhost:3000/projects/cheapfaretravel",
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+    title: "Xtreim",
+    link: "http://localhost:3000/projects/xtreim",
+    thumbnail:"/images/Xtreim.png",
   },
   {
     title: "Alpine Resort",
-    link: "",
+    link: "http://localhost:3000/projects/alpine",
     thumbnail: "/images/alpine1.png",
   },
 
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+ {
+    title: "Xtreim",
+    link: "http://localhost:3000/projects/xtreim",
+    thumbnail:"/images/xtreimDash.png",
   },
   {
     title: "Alpine Resort",
-    link: "",
+    link: "http://localhost:3000/projects/alpine",
     thumbnail: "/images/alpine.png",
   },
   {
     title: "Alpine Resort",
-    link: "",
+    link: "http://localhost:3000/projects/alpine",
     thumbnail: "/images/alpine6.png",
   },
   {
     title: "Redefine",
-    link: "",
+    link: "http://localhost:3000/projects/zentry",
     thumbnail: "/images/zentry.png",
-  },
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-  },
-  {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-  },
-  {
-    title: "Redefine",
-    link: "",
-    thumbnail: "/images/zentry2.png",
-  },
-  {
-    title: "Alpine Resort",
-    link: "",
-    thumbnail: "/images/alpine2.png",
   },
   {
     title: "Cheapfaretravel",
     thumbnail: "/images/cft1.png",
+    link: "http://localhost:3000/projects/cheapfaretravel",
+  },
+ {
+    title: "Xtreim",
+    link: "http://localhost:3000/projects/xtreim",
+    thumbnail:"/images/xtreimDash.png",
+  },
+  {
+    title: "Redefine",
+    link: "http://localhost:3000/projects/zentry",
+    thumbnail: "/images/zentry2.png",
   },
   {
     title: "Alpine Resort",
-    link: "",
+    link: "http://localhost:3000/projects/alpine",
     thumbnail: "/images/alpine6.png",
   },
+ {
+    title: "Cheapfaretravel",
+    thumbnail: "/images/cft.png",
+    link: "http://localhost:3000/projects/cheapfaretravel",
+  },
   {
     title: "Alpine Resort",
-    link: "",
-    thumbnail: "/images/alpine2.png",
+    link: "http://localhost:3000/projects/alpine",
+    thumbnail: "/images/alpine4.png",
+  },
+ {
+    title: "Alpine Resort",
+    link: "http://localhost:3000/projects/alpine",
+    thumbnail: "/images/alpine3.png",
   },
 ];
 
@@ -197,17 +196,23 @@ export const ProductCard = ({ product, translate }) => {
       key={product.title}
       className="group/product h-96 w-[30rem] relative shrink-0"
     >
-      <a href={product.link} className="block group-hover/product:shadow-sm">
+       <Link
+            href={product.link}
+            className="flex space-x-2"
+          >
+
+      {/* <a href={product.link} className="block group-hover/product:shadow-sm"> */}
         <img
           src={product.thumbnail}
           height="600"
           width="600"
           className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
-        />
-      </a>
+          />
+      {/* </a> */}
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-20 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 text-white">{product.title}</h2>
+          </Link>
     </motion.div>
   );
 };

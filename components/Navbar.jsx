@@ -37,33 +37,33 @@ function Navbar({ className }) {
             <HoveredLink to="/services">Services</HoveredLink>
 
             <MenuItem setActive={setActive} active={active} item="Projects">
-              <div className="text-sm grid grid-cols-2 gap-10 p-4">
+              <div className="text-sm grid grid-cols-2 gap-10 p-4 bg-slate-900">
                 <ProductItem
-                  title="Algochurn"
-                  href="https://algochurn.com"
-                  external={true}
-                  src="https://assets.aceternity.com/demos/algochurn.webp"
+                  title="Xtreim"
+                  href="http://localhost:3000/projects/xtreim"
+                  external={false}
+                  src="/images/Xtreim.png"
                   description="Prepare for tech interviews like never before."
                 />
                 <ProductItem
-                  title="Tailwind Master Kit"
-                  href="https://tailwindmasterkit.com"
-                  external={true}
-                  src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                  title="Alpine Resort"
+                  href="http://localhost:3000/projects/alpine"
+                  external={false}
+                  src="/images/alpineBoth.svg"
                   description="Production ready Tailwind css components for your next project"
                 />
                 <ProductItem
-                  title="Moonbeam"
-                  href="https://gomoonbeam.com"
-                  external={true}
-                  src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                  title="Cheap Air Travel"
+                  href="http://localhost:3000/projects/cheapfaretravel"
+                  external={false}
+                  src="/images/cheapAirBoth.svg"
                   description="Never write from scratch again. Go from idea to blog in minutes."
                 />
                 <ProductItem
-                  title="Rogue"
-                  href="https://userogue.com"
-                  external={true}
-                  src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                  title="Redefine"
+                  href="http://localhost:3000/projects/zentry"
+                  external={false}
+                  src="/images/redefineBoth.png"
                   description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
                 />
               </div>

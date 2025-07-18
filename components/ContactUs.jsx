@@ -15,7 +15,6 @@ export default function ContactForm() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Submitting:", data);
     // Handle form submission
   };
 
