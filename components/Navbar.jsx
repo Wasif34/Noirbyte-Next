@@ -53,7 +53,7 @@ function Navbar({ className }) {
                   description="Production ready Tailwind css components for your next project"
                 />
                 <ProductItem
-                  title="Cheap Air Travel"
+                  title="CheapfareTravel"
                   href="http://localhost:3000/projects/cheapfaretravel"
                   external={false}
                   src="/images/cheapAirBoth.svg"
