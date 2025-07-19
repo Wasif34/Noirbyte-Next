@@ -13,60 +13,60 @@ import {
 export function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Built for Developers",
+      title: "Custom Software Development",
       description:
-        "Designed with developers, engineers, and innovators in mind — powerful, flexible, and intuitive.",
+        "From idea to execution — we craft scalable web and mobile apps tailored to your needs.",
       icon: <IconTerminal2 />,
       color: "blue",
     },
     {
-      title: "Ease of Use",
+      title: "AI-Powered Solutions",
       description:
-        "A seamless and intuitive experience, making complex tasks feel effortless.",
-      icon: <IconEaseInOut />,
-      color: "green",
+        "We integrate cutting-edge AI and machine learning to future-proof your digital products.",
+      icon: <IconCpu />,
+      color: "indigo",
     },
     {
-      title: "Unmatched Pricing",
+      title: "Cloud & DevOps Expertise",
       description:
-        "Transparent, competitive pricing with no hidden fees or credit card required to get started.",
-      icon: <IconCurrencyDollar />,
-      color: "purple",
-    },
-    {
-      title: "100% Uptime Guarantee",
-      description:
-        "Reliability you can count on — built to stay online and performant, always.",
+        "Streamline your infrastructure with secure, automated, and efficient DevOps pipelines.",
       icon: <IconCloud />,
       color: "cyan",
     },
     {
-      title: "Multi-Tenant Architecture",
+      title: "End-to-End Project Ownership",
       description:
-        "Efficiently manage multiple clients or teams under one secure, scalable platform.",
-      icon: <IconRouteAltLeft />,
+        "From design to deployment, we handle every step with precision and accountability.",
+      icon: <IconLayoutDashboard />,
+      color: "green",
+    },
+    {
+      title: "Cross-Platform Excellence",
+      description:
+        "Deliver consistent experiences across web, iOS, and Android with modern, responsive designs.",
+      icon: <IconDeviceMobileCode />,
+      color: "purple",
+    },
+    {
+      title: "Agile & Transparent Workflow",
+      description:
+        "Stay in the loop — we work in agile sprints with full visibility and regular updates.",
+      icon: <IconTimeline />,
       color: "orange",
     },
     {
-      title: "24/7 Customer Support",
+      title: "Secure by Design",
       description:
-        "Round-the-clock assistance from our expert team — always ready to help when you need it.",
-      icon: <IconHelp />,
-      color: "pink",
-    },
-    {
-      title: "Money-Back Guarantee",
-      description:
-        "Not satisfied? We’ll work with you to make it right — or issue a full refund.",
-      icon: <IconAdjustmentsBolt />,
-      color: "yellow",
-    },
-    {
-      title: "And More to Come",
-      description:
-        "We're constantly evolving. Stay tuned for new features, improvements, and surprises.",
-      icon: <IconHeart />,
+        "We build with best-in-class security practices to keep your data and users safe.",
+      icon: <IconShieldCheck />,
       color: "red",
+    },
+    {
+      title: "Ongoing Support & Maintenance",
+      description:
+        "We don’t just ship and vanish. Count on us for continuous improvements and long-term support.",
+      icon: <IconLifebuoy />,
+      color: "pink",
     },
   ];
 

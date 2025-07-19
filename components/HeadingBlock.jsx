@@ -9,9 +9,9 @@ export const HeadingBlock = () => {
       <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       <Boxes />
       <h1 className="text-9xl uppercase font-titillium font-light text-center md:text-8xl mb-4 text-white relative z-20">
-        <span className="font-black">Explore</span> Our Expertise <br></br>{" "}
-        <span className="font-black">Excellence, Efficiency</span> <br></br>
-        <span className="font-black">Experience</span> in Sync!{" "}
+        <span className="font-black">NoirByte</span> Crafts Code <br />
+        <span className="font-black">Delivers</span> Impact <br />
+        <span className="font-black">Drives</span> the Future
       </h1>
     </div>
   );
