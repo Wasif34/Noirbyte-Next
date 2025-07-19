@@ -2,12 +2,18 @@ import { cn } from "@/lib/util";
 import {
   IconAdjustmentsBolt,
   IconCloud,
+  IconCpu,
   IconCurrencyDollar,
+  IconDeviceMobileMessage,
   IconEaseInOut,
   IconHeart,
   IconHelp,
+  IconLayoutDashboard,
+  IconLifebuoy,
   IconRouteAltLeft,
+  IconShieldCheck,
   IconTerminal2,
+  IconTimeline,
 } from "@tabler/icons-react";
 
 export function FeaturesSectionDemo() {
@@ -44,7 +50,7 @@ export function FeaturesSectionDemo() {
       title: "Cross-Platform Excellence",
       description:
         "Deliver consistent experiences across web, iOS, and Android with modern, responsive designs.",
-      icon: <IconDeviceMobileCode />,
+      icon: <IconDeviceMobileMessage />,
       color: "purple",
     },
     {
