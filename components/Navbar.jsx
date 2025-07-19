@@ -40,28 +40,28 @@ function Navbar({ className }) {
               <div className="text-sm grid grid-cols-2 gap-10 p-4 bg-slate-900">
                 <ProductItem
                   title="Xtreim"
-                  href="http://localhost:3000/projects/xtreim"
+                  href="https://www.noirbyte.co/projects/xtreim"
                   external={false}
                   src="/images/Xtreim.png"
                   description="Prepare for tech interviews like never before."
                 />
                 <ProductItem
                   title="Alpine Resort"
-                  href="http://localhost:3000/projects/alpine"
+                  href="https://www.noirbyte.co/projects/alpine"
                   external={false}
                   src="/images/alpineBoth.svg"
                   description="Production ready Tailwind css components for your next project"
                 />
                 <ProductItem
                   title="CheapfareTravel"
-                  href="http://localhost:3000/projects/cheapfaretravel"
+                  href="https://www.noirbyte.co/projects/cheapfaretravel"
                   external={false}
                   src="/images/cheapAirBoth.svg"
                   description="Never write from scratch again. Go from idea to blog in minutes."
                 />
                 <ProductItem
                   title="Redefine"
-                  href="http://localhost:3000/projects/zentry"
+                  href="https://www.noirbyte.co/projects/zentry"
                   external={false}
                   src="/images/redefineBoth.png"
                   description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
