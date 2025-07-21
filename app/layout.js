@@ -10,6 +10,7 @@ export const metadata = {
     "full-stack development",
     "mobile apps",
     "cloud infrastructure",
+    "SAAS"
   ],
   authors: [{ name: "NoirByte" }],
   creator: "NoirByte",
