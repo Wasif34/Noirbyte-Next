@@ -25,7 +25,7 @@ const projects = [
     "Third-party API integrations"
   ],
   metrics: {
-    users: "10,000+ rides processed",
+    users: "1,000+ rides processed",
     uptime: "99.9%",
     performance: "Fast & responsive UX",
     scalability: "Supports growing fleets"
@@ -58,9 +58,9 @@ const projects = [
     "Real-time fare alerts and notifications"
   ],
   metrics: {
-    bookings: "50,000+ travel bookings",
+    bookings: "5,000+ travel bookings",
     savings: "Up to 30% on average",
-    airlines: "200+ global airline partners",
+    airlines: "20+ global airline partners",
     coverage: "Worldwide destinations"
   },
   images: ["/images/cft1.png", "/images/cheapAirBoth.svg"]
@@ -99,24 +99,24 @@ const projects = [
     "Universal Metagame data layer"
   ],
   metrics: {
-    games: "100+ integrated games",
-    players: "1M+ active players",
+    games: "Many integrated games",
+    players: "100K+ active players",
     transactions: "$10M+ in asset trades",
-    developers: "500+ supported developers"
+    developers: "50+ supported developers"
   },
   images: ["/images/zentry2.png", "/images/redefineBoth.png"]
 },
   {
   name: "Alpine Resort",
   slug: "alpine",
-  subtitle: "Digital Tourism & Resort Management Platform for Khyber Pakhtunkhwa",
+  subtitle: "Digital Tourism & Resort Management Platform",
   heroBg: "/images/alpine1.png",
   ctaPrimaryText: "Explore Destinations",
   ctaPrimaryLink: "#journey",
   ctaSecondaryText: "Tech Behind It",
   ctaSecondaryLink: "#tech",
   detail:
-    "Alpine KPK is a government-backed digital tourism and resort management platform created to promote the natural beauty, culture, and adventure of Khyber Pakhtunkhwa, Pakistan. It features a stunning public-facing tourism portal with interactive maps, destination guides, weather updates, and 360° virtual tours. Behind the scenes, Alpine includes a full-featured SaaS dashboard for resort owners and tourism operators to manage bookings, listings, and customer engagement. With multilingual content (Urdu, English, regional dialects), PWA support for offline access, and seamless integration with hotels, guides, and transport services, Alpine enables both travelers and operators to explore and manage travel with ease. The platform fosters community through user-contributed photos, reviews, and travel tips.",
+    "Alpine  is a digital tourism and resort management platform created to promote the natural beauty, culture, and adventure of Pakistan. It features a stunning public-facing tourism portal with interactive maps, destination guides, weather updates, and 360° virtual tours. Behind the scenes, Alpine includes a full-featured SaaS dashboard for resort owners and tourism operators to manage bookings, listings, and customer engagement. With multilingual content (Urdu, English, regional dialects), PWA support for offline access, and seamless integration with hotels, guides, and transport services, Alpine enables both travelers and operators to explore and manage travel with ease. The platform fosters community through user-contributed photos, reviews, and travel tips.",
   techStack: [
     "React", "Tailwind CSS", "Node.js", "Express.js",
     "MongoDB", "Mapbox API", "Cloudinary", "PWA"
@@ -134,9 +134,9 @@ const projects = [
     "Secure and scalable architecture"
   ],
   metrics: {
-    destinations: "200+ featured locations",
-    visitors: "500K+ monthly users",
-    bookings: "25,000+ tour and resort bookings",
+    destinations: "20+ featured locations",
+    visitors: "50K+ monthly users",
+    bookings: "200+ tour and resort bookings",
     languages: "Supports Urdu, English, and regional languages"
   },
   images: ["/images/alpine4.png", "/images/alpine6.png"]

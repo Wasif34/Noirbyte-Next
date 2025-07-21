@@ -16,72 +16,72 @@ export const products = [
   {
     title: "Cheapfaretravel",
     thumbnail: "/images/cft.png",
-    link: "http://localhost:3000/projects/cheapfaretravel",
+    link: "https://www.noirbyte.co/projects/cheapfaretravel",
   },
   {
     title: "Xtreim",
-    link: "http://localhost:3000/projects/xtreim",
+    link: "https://www.noirbyte.co/projects/xtreim",
     thumbnail:"/images/Xtreim.png",
   },
   {
     title: "Alpine Resort",
-    link: "http://localhost:3000/projects/alpine",
+    link: "https://www.noirbyte.co/projects/alpine",
     thumbnail: "/images/alpine1.png",
   },
 
  {
     title: "Xtreim",
-    link: "http://localhost:3000/projects/xtreim",
+    link: "https://www.noirbyte.co/projects/xtreim",
     thumbnail:"/images/xtreimDash.png",
   },
   {
     title: "Alpine Resort",
-    link: "http://localhost:3000/projects/alpine",
+    link: "https://www.noirbyte.co/projects/alpine",
     thumbnail: "/images/alpine.png",
   },
   {
     title: "Alpine Resort",
-    link: "http://localhost:3000/projects/alpine",
+    link: "https://www.noirbyte.co/projects/alpine",
     thumbnail: "/images/alpine6.png",
   },
   {
     title: "Redefine",
-    link: "http://localhost:3000/projects/zentry",
+    link: "https://www.noirbyte.co/projects/zentry",
     thumbnail: "/images/zentry.png",
   },
   {
     title: "Cheapfaretravel",
     thumbnail: "/images/cft1.png",
-    link: "http://localhost:3000/projects/cheapfaretravel",
+    link: "https://www.noirbyte.co/projects/cheapfaretravel",
   },
  {
     title: "Xtreim",
-    link: "http://localhost:3000/projects/xtreim",
+    link: "https://www.noirbyte.co/projects/xtreim",
     thumbnail:"/images/xtreimDash.png",
   },
   {
     title: "Redefine",
-    link: "http://localhost:3000/projects/zentry",
+    link: "https://www.noirbyte.co/projects/zentry",
     thumbnail: "/images/zentry2.png",
   },
   {
     title: "Alpine Resort",
-    link: "http://localhost:3000/projects/alpine",
+    link: "https://www.noirbyte.co/projects/alpine",
     thumbnail: "/images/alpine6.png",
   },
  {
     title: "Cheapfaretravel",
     thumbnail: "/images/cft.png",
-    link: "http://localhost:3000/projects/cheapfaretravel",
+    link: "https://www.noirbyte.co/projects/cheapfaretravel",
   },
   {
     title: "Alpine Resort",
-    link: "http://localhost:3000/projects/alpine",
+    link: "https://www.noirbyte.co/projects/alpine",
     thumbnail: "/images/alpine4.png",
   },
  {
     title: "Alpine Resort",
-    link: "http://localhost:3000/projects/alpine",
+    link: "https://www.noirbyte.co/projects/alpine",
     thumbnail: "/images/alpine3.png",
   },
 ];

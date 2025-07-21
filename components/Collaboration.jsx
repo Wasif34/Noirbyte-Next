@@ -64,7 +64,7 @@ export const Collaboration = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            className="flex justify-center items-center mb-6"
+            className="flex md:flex-row flex-col justify-center items-center mb-6"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
@@ -99,7 +99,7 @@ export const Collaboration = () => {
               href="https://xtreim.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative  bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 font-semibold"
+              className="relative underline bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 font-semibold"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
@@ -195,7 +195,7 @@ export const Collaboration = () => {
                   </motion.div>
 
                   <motion.div
-                    className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute -bottom-8 left-1/2 transform  text-xs text-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     initial={{ y: 10 }}
                     whileHover={{ y: 0 }}
                   >

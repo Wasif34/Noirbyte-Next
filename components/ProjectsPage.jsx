@@ -261,7 +261,7 @@ const ProjectsPage = ({ project }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <MagneticButton className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium overflow-hidden">
+            {/* <MagneticButton className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium overflow-hidden">
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity"
                 initial={false}
@@ -278,7 +278,7 @@ const ProjectsPage = ({ project }) => {
                 whileHover={{ opacity: 1 }}
               />
               <span className="relative z-10">{ctaSecondaryText}</span>
-            </MagneticButton>
+            </MagneticButton> */}
           </motion.div>
         </div>
         <motion.div

@@ -61,12 +61,16 @@ export const ProductItem = ({
   title,
   description,
   href,
+  to, // Add 'to' prop
   src,
   external,
 }) => {
+  // Use 'to' if provided, otherwise fall back to 'href'
+  const linkDestination = to || href;
+  
   return (
     <Link
-      href={href}
+      href={linkDestination} // If using Next.js Link
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
       className="flex space-x-2"

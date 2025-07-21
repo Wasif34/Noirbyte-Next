@@ -13,6 +13,7 @@ import {
   Code,
   Zap,
   Heart,
+  Facebook,
 } from "lucide-react";
 
 export const Footer = () => {
@@ -34,17 +35,14 @@ export const Footer = () => {
   const quickLinks = [
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Projects", href: "/projects" },
     { name: "Contact", href: "/contact" },
-    { name: "Blog", href: "/blog" },
-    { name: "Careers", href: "/careers" },
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    // { icon: Github, href: "#", label: "GitHub" },
+    { icon: Facebook, href: "https://www.facebook.com/share/15dLaeJLgr/", label: "Facebook" },
     { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/noirbyte_techsolutions?igsh=MTRlaW1ieWVmdGltbA==", label: "Instagram" },
   ];
 
   return (
@@ -200,10 +198,10 @@ export const Footer = () => {
                   <Phone className="w-4 h-4 text-teal-400" />
                 </div>
                 <a
-                  href="tel:+92511234567"
+                  href="tel:+923366562329"
                   className="font-TikTok hover:text-teal-400 transition-colors duration-200"
                 >
-                  +92 51 1234567
+                  +92 336 6562329
                 </a>
               </div>
 

@@ -248,10 +248,10 @@ export default function ContactForm() {
                       Call us at
                     </p>
                     <a
-                      href="tel:+92511234567"
+                      href="tel:+923366562329"
                       className="font-TikTok text-white font-semibold hover:text-teal-400 transition-colors duration-200"
                     >
-                      +92 51 1234567
+                      +92 336 6562329
                     </a>
                   </div>
                 </div>

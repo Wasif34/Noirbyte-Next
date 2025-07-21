@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { NavbarDemo } from "@/components/Navbar";
 
 export const metadata = {
-  title: "About | NoirByte",
+  title: "NoirByte - Full-Stack Development & AI Solutions",
   description:
     "Learn about NoirByte, our mission, our expertise, and how we deliver top-tier tech solutions.",
 };
