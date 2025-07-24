@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata = {
   title: "NoirByte - Full-Stack Development & AI Solutions",
@@ -10,7 +11,7 @@ export const metadata = {
     "full-stack development",
     "mobile apps",
     "cloud infrastructure",
-    "SAAS"
+    "SAAS",
   ],
   authors: [{ name: "NoirByte" }],
   creator: "NoirByte",
@@ -31,13 +32,37 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <link
-          favicons="NoirByte"
+          href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+          rel="stylesheet"
+        />
+
+        <link
           rel="icon"
           href="https://res.cloudinary.com/do7axj4vk/image/upload/v1752577309/nb1-cropped_qrail4.svg"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
-          rel="stylesheet"
+
+        <Script
+          id="org-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "Organization",
+              name: "NoirByte",
+              url: "https://www.noirbyte.co",
+              logo: "https://res.cloudinary.com/do7axj4vk/image/upload/v1752577309/nb1-cropped_qrail4.svg",
+              sameAs: ["https://www.linkedin.com/company/noirbyte"],
+              contactPoint: [
+                {
+                  "@type": "ContactPoint",
+                  telephone: "+92-336-6562329",
+                  contactType: "Customer Support",
+                  areaServed: "PK",
+                },
+              ],
+            }),
+          }}
         />
       </head>
 
