@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.noirbyte.co
+
+# Sitemaps
+Sitemap: https://www.noirbyte.co/sitemap.xml
