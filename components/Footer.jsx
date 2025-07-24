@@ -276,13 +276,15 @@ export const Footer = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-12 pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center gap-4"
         >
-          <div className="flex items-center gap-2 text-gray-400">
+          <div className="flex flex-wrap items-center gap-2 text-gray-400 text-sm text-center justify-center">
             <span className="font-TikTok">
               © {currentYear} NoirByte. Made with
             </span>
             <Heart className="w-4 h-4 text-red-500 fill-current" />
             <span className="font-TikTok">by our amazing team</span>
           </div>
+
+
 
           <div className="flex items-center gap-6">
             <a

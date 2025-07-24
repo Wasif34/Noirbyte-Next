@@ -17,7 +17,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white text-sm font-medium"
+        className="cursor-pointer hover:opacity-[0.9] text-white text-sm font-medium"
       >
         {item}
       </motion.p>
@@ -32,7 +32,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
               <motion.div
                 transition={transition}
                 layoutId="active"
-                className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className=" bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-white/[0.2] shadow-xl"
               >
                 <motion.div layout className="w-max h-full p-4">
                   {children}
@@ -50,7 +50,7 @@ export const Menu = ({ setActive, children }) => {
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-full border border-transparent dark:bg-black/50 dark:border-white/[0.2] bg-white/80 backdrop-blur-md shadow-lg px-8 py-4 w-full"
+      className="relative rounded-full border bg-black/50 border-white/[0.2]  backdrop-blur-md shadow-lg px-8 py-4 w-full"
     >
       {children}
     </nav>
@@ -83,10 +83,10 @@ export const ProductItem = ({
         className="shrink-0 rounded-md shadow-2xl"
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
+        <h4 className="text-xl font-bold mb-1 text-white">
           {title}
         </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+        <p className="text-sm max-w-[10rem] text-neutral-300">
           {description}
         </p>
       </div>
@@ -107,7 +107,7 @@ export const HoveredLink = ({
       <a
         href={href}
         {...rest}
-        className="text-neutral-700 dark:text-neutral-200 hover:text-black dark:hover:text-white text-sm font-medium transition-colors"
+        className="text-neutral-200 hover:text-white text-sm font-medium transition-colors"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -120,7 +120,7 @@ export const HoveredLink = ({
     <Link
       href={to || href}
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black dark:hover:text-white text-sm font-medium transition-colors"
+      className="text-neutral-200 hover:text-white text-sm font-medium transition-colors"
     >
       {children}
     </Link>

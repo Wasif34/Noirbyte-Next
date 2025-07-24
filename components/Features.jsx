@@ -145,15 +145,15 @@ const Feature = ({ title, description, icon, index, color }) => {
   return (
     <div
       className={cn(
-        "flex flex-col lg:border-r py-10 relative group/feature dark:border-neutral-800",
-        (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
-        index < 4 && "lg:border-b dark:border-neutral-800"
+        "flex flex-col lg:border-r py-10 relative group/feature border-neutral-800",
+        (index === 0 || index === 4) && "lg:border-l border-neutral-800",
+        index < 4 && "lg:border-b border-neutral-800"
       )}
     >
       {index < 4 && (
         <div
           className={cn(
-            "opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none",
+            "opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-800 to-transparent pointer-events-none",
             colorClasses.bg
           )}
         />
@@ -161,14 +161,14 @@ const Feature = ({ title, description, icon, index, color }) => {
       {index >= 4 && (
         <div
           className={cn(
-            "opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none",
+            "opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-800 to-transparent pointer-events-none",
             colorClasses.bg
           )}
         />
       )}
       <div
         className={cn(
-          "mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400 transition-colors duration-200",
+          "mb-4 relative z-10 px-10 text-neutral-400 transition-colors duration-200",
           colorClasses.icon
         )}
       >
@@ -177,20 +177,20 @@ const Feature = ({ title, description, icon, index, color }) => {
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
         <div
           className={cn(
-            "absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 transition-all duration-200 origin-center",
+            "absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-700 transition-all duration-200 origin-center",
             colorClasses.border
           )}
         />
         <span
           className={cn(
-            "group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-800 dark:text-neutral-100",
+            "group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-100",
             colorClasses.title
           )}
         >
           {title}
         </span>
       </div>
-      <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
+      <p className="text-sm text-neutral-300 max-w-xs relative z-10 px-10">
         {description}
       </p>
     </div>
@@ -207,15 +207,15 @@ const Feature = ({ title, description, icon, index, color }) => {
 //         {grid.map((feature, index) => (
 //           <div
 //             key={feature.title}
-//             className={`relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden group transition-all duration-300 hover:scale-105 ${getHoverColors(
+//             className={`relative bg-gradient-to-b from-neutral-900 from-neutral-100 to-neutral-950 to-white p-6 rounded-3xl overflow-hidden group transition-all duration-300 hover:scale-105 ${getHoverColors(
 //               index
 //             )}`}
 //           >
 //             <Grid size={20} />
-//             <p className="text-base font-bold text-neutral-800 dark:text-white relative z-20 group-hover:text-white transition-colors duration-300">
+//             <p className="text-base font-bold text-neutral-800 text-white relative z-20 group-hover:text-white transition-colors duration-300">
 //               {feature.title}
 //             </p>
-//             <p className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-20 group-hover:text-neutral-200 transition-colors duration-300">
+//             <p className="text-neutral-600 text-neutral-400 mt-4 text-base font-normal relative z-20 group-hover:text-neutral-200 transition-colors duration-300">
 //               {feature.description}
 //             </p>
 //           </div>
@@ -292,14 +292,14 @@ const Feature = ({ title, description, icon, index, color }) => {
 //   ];
 //   return (
 //     <div className="pointer-events-none absolute left-1/2 top-0  -ml-20 -mt-2 h-full w-full [mask-image:linear-gradient(white,transparent)]">
-//       <div className=" bg-gray-500 absolute inset-0 bg-gradient-to-r  [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-zinc-900/30 from-zinc-100/30 to-zinc-300/30 dark:to-zinc-900/30 opacity-100">
+//       <div className=" bg-gray-500 absolute inset-0 bg-gradient-to-r  [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] from-zinc-900/30 from-zinc-100/30 to-zinc-300/30 to-zinc-900/30 opacity-100">
 //         <GridPattern
 //           width={size ?? 20}
 //           height={size ?? 20}
 //           x="-12"
 //           y="4"
 //           squares={p}
-//           className="absolute inset-0 h-full w-full  mix-blend-overlay dark:fill-white/10 dark:stroke-white/10 stroke-black/10 fill-black/10"
+//           className="absolute inset-0 h-full w-full  mix-blend-overlay fill-white/10 stroke-white/10 stroke-black/10 fill-black/10"
 //         />
 //       </div>
 //     </div>

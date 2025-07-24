@@ -6,7 +6,7 @@ export function BackgroundBeamsWithCollisionDemo() {
   return (
     <BackgroundBeamsWithCollision>
       <div className="flex flex-col items-center justify-center h-screen bg-black w-full min-h-screen">
-        <div className="text-2xl relative z-20 md:text-4xl lg:text-7xl font-titillium text-center text-black dark:text-white font-sans tracking-tight">
+        <div className="text-4xl relative z-20 md:text-4xl lg:text-7xl font-titillium text-center text-white tracking-tight">
           NoirByte
         </div>
 

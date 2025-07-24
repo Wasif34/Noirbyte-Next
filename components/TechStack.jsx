@@ -229,39 +229,39 @@ export function TechStack() {
   return (
     <section className="py-20 bg-gray-950 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black" />
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* LEFT CONTENT */}
+          <div className="space-y-10 text-center lg:text-left">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Our{" "}
                 <span className="font-TikTok bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">
                   Tech Stack
                 </span>
               </h2>
-              <div className="font-TikTok text-gray-300 text-lg">
+              <div className="font-TikTok text-gray-300 text-base sm:text-lg leading-relaxed">
                 Our tech stack covers the full spectrum of software development,
                 including front-end technologies like{" "}
                 <PointerHighlight
-                  rectangleClassName="bg-teal-400 dark:bg-teal-300/30 border-teal-100 dark:border-teal-100/10 leading-loose"
+                  rectangleClassName="bg-teal-400 bg-teal-300/30 border-teal-100 border-teal-100/10 leading-loose"
                   pointerClassName="text-teal-500 h-3 w-3"
                   containerClassName="inline-block mx-1"
                 >
                   <span className="relative z-10">
-                    React and Angular, back-end frameworks such as Node.js and
-                    Django, cloud solutions with AWS and Azure, and modern tools
-                    like Kubernetes, Docker, and CI/CD pipelines.
+                    React and Angular, back-end frameworks such as Node.js and Django, cloud solutions with AWS and Azure, and modern tools like Kubernetes, Docker, and CI/CD pipelines.
                   </span>
                 </PointerHighlight>
               </div>
             </div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-6 border border-gray-700"
+              className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-6 border border-gray-700 mx-auto lg:mx-0"
             >
-              <h3 className="text-white text-xl font-semibold mb-3">
+              <h3 className="text-white text-lg sm:text-xl font-semibold mb-4">
                 Tailored services to match your needs, see what we offer!
               </h3>
               <button
@@ -273,10 +273,11 @@ export function TechStack() {
             </motion.div>
           </div>
 
-          <div className="relative">
-            <div className="relative mx-auto" style={containerDimensions}>
+          {/* RIGHT CONTENT */}
+          <div className="relative mt-12 lg:mt-0">
+            <div className="relative mx-auto max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-full" style={containerDimensions}>
               <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-blue-500/10 rounded-full blur-3xl" />
-
+              
               {animatedLogos.map((logo, i) => (
                 <FloatingIcon
                   key={logo.id}
@@ -310,6 +311,7 @@ export function TechStack() {
         </div>
       </div>
     </section>
+
   );
 }
 
