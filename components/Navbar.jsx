@@ -26,6 +26,7 @@ function Navbar({ className }) {
       <Menu setActive={setActive}>
         <div className="flex items-center justify-between w-full">
           {/* Logo */}
+          <HoveredLink >
           <div className="flex items-center space-x-4">
             <img
               src="/images/nb1-cropped.svg"
@@ -36,10 +37,11 @@ function Navbar({ className }) {
               noirbyte™
             </span>
           </div>
+          </HoveredLink>
 
           {/* Desktop Navigation Items */}
           <div className="hidden lg:flex items-center space-x-8">
-            <HoveredLink to="/">Home</HoveredLink>
+            {/* <HoveredLink to="/">Home</HoveredLink> */}
             <HoveredLink to="/services">Services</HoveredLink>
 
             <MenuItem setActive={setActive} active={active} item="Projects">
@@ -105,7 +107,7 @@ function Navbar({ className }) {
             </a> */}
 
             {/* CTA Button */}
-            <button className="bg-black dark:bg-white text-white dark:text-black px-3 py-2 lg:px-4 rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
+            <button className="bg-white text-black px-3 py-2 lg:px-4 rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
               Get noirbyte™
             </button>
           </div>
@@ -118,19 +120,19 @@ function Navbar({ className }) {
           >
             <span
               className={cn(
-                "block w-6 h-0.5 bg-black dark:bg-white transition-all duration-300",
+                "block w-6 h-0.5 bg-white transition-all duration-300",
                 mobileMenuOpen ? "rotate-45 translate-y-2" : ""
               )}
             />
             <span
               className={cn(
-                "block w-6 h-0.5 bg-black dark:bg-white transition-all duration-300",
+                "block w-6 h-0.5 bg-white transition-all duration-300",
                 mobileMenuOpen ? "opacity-0" : ""
               )}
             />
             <span
               className={cn(
-                "block w-6 h-0.5 bg-black dark:bg-white transition-all duration-300",
+                "block w-6 h-0.5 bg-white transition-all duration-300",
                 mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
               )}
             />
@@ -140,7 +142,7 @@ function Navbar({ className }) {
         {/* Mobile Menu */}
         <div
           className={cn(
-            "lg:hidden absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 overflow-hidden",
+            "lg:hidden absolute top-full left-0 right-0 mt-2 bg-gray-900 rounded-lg shadow-lg border border-gray-700 transition-all duration-300 overflow-hidden",
             mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           )}
         >
@@ -149,14 +151,14 @@ function Navbar({ className }) {
             <div className="space-y-3">
               <a
                 href="/"
-                className="block text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                className="block text-white hover:text-gray-300 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </a>
               <a
                 href="/services"
-                className="block text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                className="block text-white hover:text-gray-300 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
@@ -168,28 +170,28 @@ function Navbar({ className }) {
                 <div className="pl-4 space-y-2">
                   <a
                     to="/projects/xtreim"
-                    className="block text-sm text-gray-600 dark:text-gray-400 hover:hover:text-white transition-colors"
+                    className="block text-sm text-gray-400 hover:hover:text-white transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Xtreim
                   </a>
                   <a
                     to="/projects/alpine"
-                    className="block text-sm text-gray-600 dark:text-gray-400 hover:hover:text-white transition-colors"
+                    className="block text-sm text-gray-400 hover:hover:text-white transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Alpine Resort
                   </a>
                   <a
                     to="/projects/cheapfaretravel"
-                    className="block text-sm text-gray-600 dark:text-gray-400 hover:hover:text-white transition-colors"
+                    className="block text-sm text-gray-400 hover:hover:text-white transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     CheapfareTravel
                   </a>
                   <a
                     to="/projects/zentry"
-                    className="block text-sm text-gray-600 dark:text-gray-400 hover:hover:text-white transition-colors"
+                    className="block text-sm text-gray-400 hover:hover:text-white transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Redefine
@@ -199,14 +201,14 @@ function Navbar({ className }) {
 
               <a
                 href="/about"
-                className="block text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                className="block text-white hover:text-gray-300 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </a>
               <a
                 href="/contact"
-                className="block text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                className="block text-white hover:text-gray-300 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
@@ -214,7 +216,7 @@ function Navbar({ className }) {
             </div>
 
             {/* Mobile Social Links and CTA */}
-            <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="pt-4 border-t border-gray-200 ">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <a
@@ -240,7 +242,7 @@ function Navbar({ className }) {
                   </a> */}
                 </div>
 
-                <button className="bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
+                <button className=" bg-white text-black px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
                   Get noirbyte™
                 </button>
               </div>

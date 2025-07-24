@@ -125,7 +125,7 @@ function AboutClient() {
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Building the Future,
                 <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent">
-                  One Line at a Time
+                  One Byte at a Time
                 </span>
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">

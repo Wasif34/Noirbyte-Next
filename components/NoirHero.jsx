@@ -171,10 +171,10 @@ const HeroParallax = ({ products }) => {
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="font-TikTok text-2xl md:text-6xl font-bold dark:text-white">
+      <h1 className="font-TikTok text-2xl md:text-6xl font-bold text-white">
         We Design. We Develop. We Deliver.
       </h1>
-      <p className="font-TikTok text-neutral-500 dark:text-neutral-300 mt-4 md:mt-8 text-lg md:text-xl">
+      <p className="font-TikTok text-neutral-500 text-neutral-300 mt-4 md:mt-8 text-lg md:text-xl">
         At NoirByte, we specialize in building cutting-edge web, mobile, and
         AI-powered solutions that drive innovation, efficiency, and growth.
         Whether you're a startup or an enterprise, we turn your ideas into
