@@ -40,9 +40,17 @@ export const Footer = () => {
 
   const socialLinks = [
     // { icon: Github, href: "#", label: "GitHub" },
-    { icon: Facebook, href: "https://www.facebook.com/share/15dLaeJLgr/", label: "Facebook" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/share/15dLaeJLgr/",
+      label: "Facebook",
+    },
     { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "https://www.instagram.com/noirbyte_techsolutions?igsh=MTRlaW1ieWVmdGltbA==", label: "Instagram" },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/noirbyte_techsolutions?igsh=MTRlaW1ieWVmdGltbA==",
+      label: "Instagram",
+    },
   ];
 
   return (
@@ -284,17 +292,15 @@ export const Footer = () => {
             <span className="font-TikTok">by our amazing team</span>
           </div>
 
-
-
           <div className="flex items-center gap-6">
             <a
-              href="#"
+              href="/privacy"
               className="font-TikTok text-gray-400 hover:text-teal-400 transition-colors duration-200 text-sm"
             >
               Privacy Policy
             </a>
             <a
-              href="#"
+              href="/terms"
               className="font-TikTok text-gray-400 hover:text-teal-400 transition-colors duration-200 text-sm"
             >
               Terms of Service
