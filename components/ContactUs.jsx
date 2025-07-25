@@ -1,28 +1,151 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { motion } from "framer-motion";
-import { Mail, Phone, Send, MapPin } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  Send,
+  MapPin,
+  CheckCircle,
+  XCircle,
+  Loader2,
+} from "lucide-react";
 import { BackgroundBeamsWithCollision } from "../ui/background-beams-with-collision";
+
+// Toast Component
+const Toast = ({ message, type, onClose }) => {
+  useEffect(() => {
+    const timer = setTimeout(onClose, 5000);
+    return () => clearTimeout(timer);
+  }, [onClose]);
+
+  const getToastStyles = () => {
+    switch (type) {
+      case "success":
+        return {
+          bg: "bg-gradient-to-r from-green-500/90 to-emerald-500/90",
+          border: "border-green-400/50",
+          icon: <CheckCircle className="w-5 h-5 text-white" />,
+        };
+      case "error":
+        return {
+          bg: "bg-gradient-to-r from-red-500/90 to-rose-500/90",
+          border: "border-red-400/50",
+          icon: <XCircle className="w-5 h-5 text-white" />,
+        };
+      case "loading":
+        return {
+          bg: "bg-gradient-to-r from-blue-500/90 to-indigo-500/90",
+          border: "border-blue-400/50",
+          icon: <Loader2 className="w-5 h-5 text-white animate-spin" />,
+        };
+      default:
+        return {
+          bg: "bg-gradient-to-r from-gray-500/90 to-slate-500/90",
+          border: "border-gray-400/50",
+          icon: null,
+        };
+    }
+  };
+
+  const styles = getToastStyles();
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 300, scale: 0.8 }}
+      animate={{ opacity: 1, x: 0, scale: 1 }}
+      exit={{ opacity: 0, x: 300, scale: 0.8 }}
+      transition={{ type: "spring", duration: 0.5 }}
+      className={`fixed bottom-4 right-4 z-50 ${styles.bg} backdrop-blur-md border ${styles.border} rounded-xl shadow-2xl p-4 max-w-sm`}
+    >
+      <div className="flex items-center gap-3">
+        {styles.icon}
+        <div className="flex-1">
+          <p className="text-white font-medium text-sm font-TikTok">
+            {message}
+          </p>
+        </div>
+        <button
+          onClick={onClose}
+          className="text-white/70 hover:text-white transition-colors duration-200"
+        >
+          <XCircle className="w-4 h-4" />
+        </button>
+      </div>
+    </motion.div>
+  );
+};
 
 export default function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors },
     reset,
   } = useForm();
 
-  const onSubmit = (data) => {
-    // Handle form submission
+  const [toast, setToast] = useState(null);
+
+  const showToast = (message, type) => {
+    setToast({ message, type });
+  };
+
+  const hideToast = () => {
+    setToast(null);
+  };
+
+  const onSubmit = async (data) => {
+    showToast("Sending your message...", "loading");
+
+    const formData = new FormData();
+
+    // Add form data
+    Object.keys(data).forEach((key) => {
+      formData.append(key, data[key]);
+    });
+
+    formData.append("access_key", "714287a5-ab90-4c70-b845-75de965b6fe0");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const responseData = await response.json();
+
+      if (responseData.success) {
+        showToast(
+          "Message sent successfully! We'll get back to you soon.",
+          "success"
+        );
+        reset();
+      } else {
+        console.log("Error", responseData);
+        showToast("❌ Failed to send message. Please try again.", "error");
+      }
+    } catch (error) {
+      console.log("Error", error);
+      showToast("⚠️ Something went wrong. Please try again later.", "error");
+    }
   };
 
   return (
-    <section className="py-20 bg-gray-950 relative overflow-hidden ">
-      {/* Background gradient */}
+    <section className="py-20 bg-gray-950 relative overflow-hidden">
+      <BackgroundBeamsWithCollision className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black" />
 
-      <BackgroundBeamsWithCollision className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black " />
+      {/* Toast Container */}
+      <AnimatePresence>
+        {toast && (
+          <Toast
+            message={toast.message}
+            type={toast.type}
+            onClose={hideToast}
+          />
+        )}
+      </AnimatePresence>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
@@ -52,22 +175,19 @@ export default function ContactForm() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 shadow-2xl"
           >
-            <form
-              action="https://formsubmit.co/info@noirbyte.com"
-              method="POST"
-              onSubmit={handleSubmit(onSubmit)}
-              className="space-y-6"
-            >
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              {/* Remove the action and method attributes */}
+
               {/* Hidden settings */}
-              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" {...register("_captcha")} value="false" />
               <input
                 type="hidden"
-                name="_next"
+                {...register("_next")}
                 value="https://noirbyte.com/thank-you"
               />
               <input
                 type="hidden"
-                name="_subject"
+                {...register("_subject")}
                 value="New Contact Form Submission"
               />
 
@@ -193,15 +313,20 @@ export default function ContactForm() {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-teal-500 to-blue-500 text-white px-6 py-3 rounded-lg font-TikTok font-semibold hover:from-teal-600 hover:to-blue-600 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
+                disabled={toast?.type === "loading"}
+                className="w-full bg-gradient-to-r from-teal-500 to-blue-500 text-white px-6 py-3 rounded-lg font-TikTok font-semibold hover:from-teal-600 hover:to-blue-600 transition-all duration-300 shadow-lg flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <Send className="w-4 h-4" />
-                Send Message
+                {toast?.type === "loading" ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Send className="w-4 h-4" />
+                )}
+                {toast?.type === "loading" ? "Sending..." : "Send Message"}
               </motion.button>
             </form>
           </motion.div>
 
-          {/* Contact Information */}
+          {/* ...existing contact information section... */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
