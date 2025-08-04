@@ -51,29 +51,30 @@ function Navbar({ className }) {
                   to="/projects/xtreim"
                   external={false}
                   src="/images/Xtreim.png"
-                  description="Prepare for tech interviews like never before."
+                  description="Limousine fleet management made simple."
                 />
                 <ProductItem
                   title="Alpine Resort"
                   to="/projects/alpine"
                   external={false}
                   src="/images/alpineBoth.svg"
-                  description="Production ready Tailwind css components for your next project"
+                  description="Promoting tourism through digital resort management."
                 />
                 <ProductItem
                   title="CheapfareTravel"
                   to="/projects/cheapfaretravel"
                   external={false}
                   src="/images/cheapAirBoth.svg"
-                  description="Never write from scratch again. Go from idea to blog in minutes."
+                  description="Book flights, hotels, and tours at the best rates."
                 />
                 <ProductItem
                   title="Redefine"
                   to="/projects/zentry"
                   external={false}
                   src="/images/redefineBoth.png"
-                  description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+                  description="AI-driven, blockchain-enabled metagame platform."
                 />
+
               </div>
             </MenuItem>
 
