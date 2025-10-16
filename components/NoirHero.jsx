@@ -125,7 +125,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 rounded-2xl blur-2xl transform rotate-6" />
                 <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl border border-border/50 p-8">
                   <Image
-                    src="/images/Pana.png"
+                    src="/images/Pana1.png"
                     alt="NoirByte AI Development"
                     width={500}
                     height={500}

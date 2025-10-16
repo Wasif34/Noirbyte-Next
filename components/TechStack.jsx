@@ -227,20 +227,20 @@ export function TechStack() {
   }, []);
 
   return (
-    <section className="py-20 bg-[#121700] relative overflow-hidden">
+    <section className="py-20 bg-[#fdfff8] text-foreground relative overflow-hidden">
       <div className="absolute inset-0" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* LEFT CONTENT */}
           <div className="space-y-10 text-center lg:text-left">
             <div>
-              <h2 className="text-4xl font-bevellierBold sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl font-bevellierBold sm:text-4xl lg:text-5xl font-bold mb-6">
                 Our{" "}
-                <span className="font-TikTok bg-accent bg-clip-text text-transparent">
+                <span className="font-TikTok bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
                   Tech Stack
                 </span>
               </h2>
-              <div className="font-bevellierLight text-gray-300 text-base sm:text-lg leading-relaxed">
+              <div className="font-bevellierLight text-muted-foreground text-base sm:text-lg leading-relaxed">
                 Our tech stack covers the full spectrum of software development,
                 including front-end technologies like{" "}
                 <PointerHighlight
@@ -248,7 +248,7 @@ export function TechStack() {
                   pointerClassName="text-primary h-3 w-3"
                   containerClassName="inline-block mx-1"
                 >
-                  <span className="relative z-10 font-bevellierLight text-gray-900">
+                  <span className="relative z-10 font-bevellierLight text-foreground">
                     React and Angular, back-end frameworks such as Node.js and
                     Django, cloud solutions with AWS and Azure, and modern tools
                     like Kubernetes, Docker, and CI/CD pipelines.
@@ -257,22 +257,19 @@ export function TechStack() {
               </div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="bg-[#121700] rounded-2xl p-6 border border-thirdary w-[600px] mx-auto lg:mx-0"
+            <div
+              className="bg-card bg-[#e0eac2] rounded-2xl p-6 border border-border w-[600px] mx-auto lg:mx-0"
             >
-              <h3 className="text-white text-lg sm:text-xl font-bevellier mb-4">
+              <h3 className="text-lg sm:text-xl font-bevellier mb-4">
                 Tailored services to match your needs, see what we offer!
               </h3>
               <button
-                className="bg-primary text-white px-6 py-3 rounded-lg font-bevellierLight hover:from-teal-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bevellierLight transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
                 onClick={() => router.push("/services")}
               >
                 Discover Our Services
               </button>
-            </motion.div>
+            </div>
           </div>
 
           {/* RIGHT CONTENT */}
@@ -281,7 +278,7 @@ export function TechStack() {
               className="relative mx-auto max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-full"
               style={containerDimensions}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-blue-500/10 rounded-full blur-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/15 via-accent/15 to-secondary/15 rounded-full blur-3xl" />
 
               {animatedLogos.map((logo, i) => (
                 <FloatingIcon
@@ -295,7 +292,7 @@ export function TechStack() {
               {particles.map((p, i) => (
                 <motion.div
                   key={`particle-${i}`}
-                  className="absolute w-2 h-2 bg-gradient-to-r from-teal-400 to-blue-400 rounded-full opacity-40"
+                  className="absolute w-2 h-2 bg-gradient-to-r from-primary to-accent rounded-full opacity-40"
                   animate={{
                     x: [0, p.x],
                     y: [0, p.y],
