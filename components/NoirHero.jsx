@@ -1,218 +1,150 @@
 "use client";
-import React from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-  MotionValue,
-} from "motion/react";
+
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
-export function HeroParallaxDemo() {
-  return <HeroParallax products={products} />;
+export function HeroSection() {
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-20"
+    >
+      {/* Simple Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-20" />
+      </div>
+
+      <div className="container relative z-10 px-6 md:px-8">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+          {/* Left Content */}
+          <div className="flex flex-col justify-center space-y-8">
+            {/* Badge */}
+
+            {/* Main Heading */}
+            <div>
+              <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bevellierBold leading-relaxed space-y-4 tracking-wider">
+                <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+                  We Design.
+                </span>
+                <span className="text-foreground">We Develop.</span>
+                <span className="text-muted-foreground">We Deliver.</span>
+              </h1>
+            </div>
+
+            {/* Description */}
+            <div>
+              <p className="text-lg md:text-xl font-bevellierLight text-muted-foreground leading-relaxed max-w-2xl">
+                At Noirbyte, we specialize in Building cutting-edge web, app and
+                AI powered solutions that drive innovation, efficiency, and
+                growth. Whether it's a startup or an enterprise, we turn your
+                ideas into beautifully engineered realities.
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <button
+                className="group relative px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:scale-105"
+                style={{ fontFamily: "Bevellier-Semibold, sans-serif" }}
+              >
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Our Projects
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </button>
+
+              <Link href="#contact">
+                <button
+                  className="px-8 py-4 bg-card border border-border rounded-xl font-semibold text-foreground hover:bg-muted transition-all duration-300 hover:scale-105"
+                  style={{ fontFamily: "Bevellier-Semibold, sans-serif" }}
+                >
+                  Let's Talk
+                </button>
+              </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="pt-8">
+              <div className="flex items-center gap-8">
+                <div>
+                  <div
+                    className="text-5xl font-bold text-primary"
+                    style={{ fontFamily: "Bevellier-Bold, sans-serif" }}
+                  >
+                    100+
+                  </div>
+                  <div
+                    className="text-sm text-muted-foreground"
+                    style={{ fontFamily: "Bevellier-Regular, sans-serif" }}
+                  >
+                    Projects Delivered
+                  </div>
+                </div>
+                <div className="w-px h-12 bg-border" />
+                <div>
+                  <div
+                    className="text-5xl font-bold text-accent"
+                    style={{ fontFamily: "Bevellier-Bold, sans-serif" }}
+                  >
+                    50+
+                  </div>
+                  <div
+                    className="text-sm text-muted-foreground"
+                    style={{ fontFamily: "Bevellier-Regular, sans-serif" }}
+                  >
+                    Happy Clients
+                  </div>
+                </div>
+                <div className="w-px h-12 bg-border" />
+                <div>
+                  <div
+                    className="text-5xl font-bold text-secondary"
+                    style={{ fontFamily: "Bevellier-Bold, sans-serif" }}
+                  >
+                    5+
+                  </div>
+                  <div
+                    className="text-sm text-muted-foreground"
+                    style={{ fontFamily: "Bevellier-Regular, sans-serif" }}
+                  >
+                    Years Experience
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Content - Image */}
+          <div className="relative flex items-center justify-center">
+            <div className="relative">
+              {/* Main image container */}
+              <div className="relative w-full max-w-lg mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 rounded-2xl blur-2xl transform rotate-6" />
+                <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl border border-border/50 p-8">
+                  <Image
+                    src="/images/Pana.png"
+                    alt="NoirByte AI Development"
+                    width={500}
+                    height={500}
+                    className="w-full h-auto"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-muted-foreground/50 rounded-full mt-2" />
+        </div>
+      </div>
+    </section>
+  );
 }
-export const products = [
-  {
-    title: "Cheapfaretravel",
-    thumbnail: "/images/cft.png",
-    link: "https://www.noirbyte.co/projects/cheapfaretravel",
-  },
-  {
-    title: "Xtreim",
-    link: "https://www.noirbyte.co/projects/xtreim",
-    thumbnail:"/images/Xtreim.png",
-  },
-  {
-    title: "Alpine Resort",
-    link: "https://www.noirbyte.co/projects/alpine",
-    thumbnail: "/images/alpine1.png",
-  },
-
- {
-    title: "Xtreim",
-    link: "https://www.noirbyte.co/projects/xtreim",
-    thumbnail:"/images/xtreimDash.png",
-  },
-  {
-    title: "Alpine Resort",
-    link: "https://www.noirbyte.co/projects/alpine",
-    thumbnail: "/images/alpine.png",
-  },
-  {
-    title: "Alpine Resort",
-    link: "https://www.noirbyte.co/projects/alpine",
-    thumbnail: "/images/alpine6.png",
-  },
-  {
-    title: "Redefine",
-    link: "https://www.noirbyte.co/projects/zentry",
-    thumbnail: "/images/zentry.png",
-  },
-  {
-    title: "Cheapfaretravel",
-    thumbnail: "/images/cft1.png",
-    link: "https://www.noirbyte.co/projects/cheapfaretravel",
-  },
- {
-    title: "Xtreim",
-    link: "https://www.noirbyte.co/projects/xtreim",
-    thumbnail:"/images/xtreimDash.png",
-  },
-  {
-    title: "Redefine",
-    link: "https://www.noirbyte.co/projects/zentry",
-    thumbnail: "/images/zentry2.png",
-  },
-  {
-    title: "Alpine Resort",
-    link: "https://www.noirbyte.co/projects/alpine",
-    thumbnail: "/images/alpine6.png",
-  },
- {
-    title: "Cheapfaretravel",
-    thumbnail: "/images/cft.png",
-    link: "https://www.noirbyte.co/projects/cheapfaretravel",
-  },
-  {
-    title: "Alpine Resort",
-    link: "https://www.noirbyte.co/projects/alpine",
-    thumbnail: "/images/alpine4.png",
-  },
- {
-    title: "Alpine Resort",
-    link: "https://www.noirbyte.co/projects/alpine",
-    thumbnail: "/images/alpine3.png",
-  },
-];
-
-const HeroParallax = ({ products }) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
-  const ref = React.useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
-
-  const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig
-  );
-  const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig
-  );
-  const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
-  );
-  const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig
-  );
-  const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig
-  );
-  const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    springConfig
-  );
-  return (
-    <div
-      ref={ref}
-      className="h-[300vh] py-40 bg-black overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
-    >
-      <Header />
-      <motion.div
-        style={{
-          rotateX,
-          rotateZ,
-          translateY,
-          opacity,
-        }}
-        className="overflow-hidden"
-      >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20 overflow-hidden">
-          {firstRow.map((product, index) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={`${product.title}-${index}`}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row mb-20 space-x-20 overflow-hidden">
-          {secondRow.map((product, index) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={`${product.title}-${index}`}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 overflow-hidden">
-          {thirdRow.map((product, index) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={`${product.title}-${index}`}
-            />
-          ))}
-        </motion.div>
-      </motion.div>
-    </div>
-  );
-};
-export const Header = () => {
-  return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="font-TikTok text-2xl md:text-6xl font-bold text-white">
-        We Design. We Develop. We Deliver.
-      </h1>
-      <p className="font-TikTok text-neutral-500 text-neutral-300 mt-4 md:mt-8 text-lg md:text-xl">
-        At NoirByte, we specialize in building cutting-edge web, mobile, and
-        AI-powered solutions that drive innovation, efficiency, and growth.
-        Whether you're a startup or an enterprise, we turn your ideas into
-        beautifully engineered realities.
-      </p>
-    </div>
-  );
-};
-
-export const ProductCard = ({ product, translate }) => {
-  return (
-    <motion.div
-      style={{
-        x: translate,
-      }}
-      whileHover={{
-        y: -20,
-      }}
-      key={product.title}
-      className="group/product h-96 w-[30rem] relative shrink-0"
-    >
-       <Link
-            href={product.link}
-            className="flex space-x-2"
-          >
-
-      {/* <a href={product.link} className="block group-hover/product:shadow-sm"> */}
-        <img
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
-          alt={product.title}
-          />
-      {/* </a> */}
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-20 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 text-white">{product.title}</h2>
-          </Link>
-    </motion.div>
-  );
-};

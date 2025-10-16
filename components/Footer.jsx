@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   Mail,
   Phone,
@@ -39,7 +38,6 @@ export const Footer = () => {
   ];
 
   const socialLinks = [
-    // { icon: Github, href: "#", label: "GitHub" },
     {
       icon: Facebook,
       href: "https://www.facebook.com/share/15dLaeJLgr/",
@@ -54,43 +52,19 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gray-950 overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black opacity-90" />
-
-      {/* Floating particles animation */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-teal-400 rounded-full opacity-30"
-            animate={{
-              y: [-20, -100],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
+    <footer className="relative bg-[#121700] border border-t-2 border-white/10 overflow-hidden">
+      {/* Static background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/8 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/6 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/4 rounded-full blur-3xl opacity-30"></div>
       </div>
 
       {/* Main footer content */}
       <div className="relative z-10 container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
           {/* Brand section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-1"
-          >
+          <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <div className="relative">
                 <img
@@ -99,163 +73,130 @@ export const Footer = () => {
                   className="h-8 w-8 z-10"
                 />
               </div>
-              <h3 className="font-TikTok text-2xl font-bold text-white">
-                Noir<span className="text-teal-400">Byte</span>
+              <h3 className="font-black text-2xl text-white">
+                Noir<span className="text-primary">Byte</span>
               </h3>
             </div>
 
-            <p className="font-TikTok text-gray-300 mb-6 leading-relaxed">
+            <p className="text-white/70 mb-6 leading-relaxed">
               Crafting digital experiences that push boundaries and redefine
               possibilities. Where innovation meets excellence.
             </p>
 
-            <div className="flex items-center gap-2 text-sm text-gray-400">
-              <Zap className="w-4 h-4 text-teal-400" />
-              <span className="font-TikTok">
-                Building the future, one byte at a time
-              </span>
+            <div className="flex items-center gap-2 text-sm text-white/60">
+              <Zap className="w-4 h-4 text-primary" />
+              <span>Building the future, one byte at a time</span>
             </div>
-          </motion.div>
+          </div>
 
           {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <h4 className="font-TikTok text-lg font-semibold text-white mb-6 relative">
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-6 relative">
               Services
-              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full" />
+              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-primary rounded-full" />
             </h4>
             <ul className="space-y-3">
-              {services.map((service, index) => (
-                <motion.li
-                  key={service}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                >
+              {services.map((service) => (
+                <li key={service}>
                   <a
                     href="#"
-                    className="font-TikTok text-gray-400 hover:text-teal-400 transition-colors duration-200 flex items-center gap-2 group"
+                    className="text-white/60 hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
                   >
-                    <div className="w-1 h-1 bg-gray-600 rounded-full group-hover:bg-teal-400 transition-colors duration-200" />
+                    <div className="w-1 h-1 bg-white/40 rounded-full group-hover:bg-primary transition-colors duration-200" />
                     {service}
                   </a>
-                </motion.li>
+                </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h4 className="font-TikTok text-lg font-semibold text-white mb-6 relative">
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-6 relative">
               Quick Links
-              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full" />
+              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-secondary rounded-full" />
             </h4>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <motion.li
-                  key={link.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                >
+              {quickLinks.map((link) => (
+                <li key={link.name}>
                   <a
                     href={link.href}
-                    className="font-TikTok text-gray-400 hover:text-teal-400 transition-colors duration-200 flex items-center gap-2 group"
+                    className="text-white/60 hover:text-secondary transition-colors duration-200 flex items-center gap-2 group"
                   >
-                    <div className="w-1 h-1 bg-gray-600 rounded-full group-hover:bg-teal-400 transition-colors duration-200" />
+                    <div className="w-1 h-1 bg-white/40 rounded-full group-hover:bg-secondary transition-colors duration-200" />
                     {link.name}
                   </a>
-                </motion.li>
+                </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <h4 className="font-TikTok text-lg font-semibold text-white mb-6 relative">
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-6 relative">
               Get in Touch
-              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full" />
+              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-accent rounded-full" />
             </h4>
 
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-gray-400">
-                <div className="w-8 h-8 bg-gray-800/50 rounded-lg flex items-center justify-center">
-                  <Mail className="w-4 h-4 text-teal-400" />
+              <div className="flex items-center gap-3 text-white/60">
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center border border-white/10">
+                  <Mail className="w-4 h-4 text-primary" />
                 </div>
                 <a
                   href="mailto:info@noirbyte.com"
-                  className="font-TikTok hover:text-teal-400 transition-colors duration-200"
+                  className="hover:text-primary transition-colors duration-200"
                 >
                   info@noirbyte.com
                 </a>
               </div>
 
-              <div className="flex items-center gap-3 text-gray-400">
-                <div className="w-8 h-8 bg-gray-800/50 rounded-lg flex items-center justify-center">
-                  <Phone className="w-4 h-4 text-teal-400" />
+              <div className="flex items-center gap-3 text-white/60">
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center border border-white/10">
+                  <Phone className="w-4 h-4 text-secondary" />
                 </div>
                 <a
                   href="tel:+923366562329"
-                  className="font-TikTok hover:text-teal-400 transition-colors duration-200"
+                  className="hover:text-secondary transition-colors duration-200"
                 >
                   +92 336 6562329
                 </a>
               </div>
 
-              <div className="flex items-center gap-3 text-gray-400">
-                <div className="w-8 h-8 bg-gray-800/50 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-4 h-4 text-teal-400" />
+              <div className="flex items-center gap-3 text-white/60">
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center border border-white/10">
+                  <MapPin className="w-4 h-4 text-accent" />
                 </div>
-                <span className="font-TikTok">Islamabad, Pakistan</span>
+                <span>Islamabad, Pakistan</span>
               </div>
             </div>
 
             {/* Social Links */}
             <div className="mt-6">
-              <p className="font-TikTok text-sm text-gray-400 mb-4">
-                Follow us
-              </p>
+              <p className="text-sm text-white/60 mb-4">Follow us</p>
               <div className="flex gap-3">
-                {socialLinks.map((social, index) => (
-                  <motion.a
+                {socialLinks.map((social) => (
+                  <a
                     key={social.label}
                     href={social.href}
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gradient-to-br hover:from-teal-500 hover:to-blue-500 hover:border-transparent transition-all duration-300"
+                    className="w-10 h-10 bg-white/10 border border-white/10 rounded-lg flex items-center justify-center text-white/60 hover:text-white hover:bg-primary hover:border-primary transition-all duration-300 hover:scale-110"
                   >
                     <social.icon className="w-5 h-5" />
-                  </motion.a>
+                  </a>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Newsletter section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 pt-8 border-t border-gray-800/50"
-        >
+        <div className="mt-16 pt-8 border-t border-white/10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h4 className="font-TikTok text-xl font-semibold text-white mb-2">
+              <h4 className="text-xl font-semibold text-white mb-2">
                 Stay in the loop
               </h4>
-              <p className="font-TikTok text-gray-400">
+              <p className="text-white/60">
                 Get the latest updates on our projects and tech insights.
               </p>
             </div>
@@ -264,62 +205,49 @@ export const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-300"
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
               />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-lg font-TikTok font-medium hover:from-teal-600 hover:to-blue-600 transition-all duration-300 shadow-lg"
-              >
+              <button className="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 shadow-lg hover:scale-105">
                 Subscribe
-              </motion.button>
+              </button>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Bottom section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center gap-4"
-        >
-          <div className="flex flex-wrap items-center gap-2 text-gray-400 text-sm text-center justify-center">
-            <span className="font-TikTok">
-              © {currentYear} NoirByte. Made with
-            </span>
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-wrap items-center gap-2 text-white/60 text-sm text-center justify-center">
+            <span>© {currentYear} NoirByte. Made with</span>
             <Heart className="w-4 h-4 text-red-500 fill-current" />
-            <span className="font-TikTok">by our amazing team</span>
+            <span>by our amazing team</span>
           </div>
 
           <div className="flex items-center gap-6">
             <a
               href="/privacy"
-              className="font-TikTok text-gray-400 hover:text-teal-400 transition-colors duration-200 text-sm"
+              className="text-white/60 hover:text-primary transition-colors duration-200 text-sm"
             >
               Privacy Policy
             </a>
             <a
               href="/terms"
-              className="font-TikTok text-gray-400 hover:text-teal-400 transition-colors duration-200 text-sm"
+              className="text-white/60 hover:text-secondary transition-colors duration-200 text-sm"
             >
               Terms of Service
             </a>
 
-            <motion.button
+            <button
               onClick={scrollToTop}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-10 h-10 bg-gradient-to-br from-teal-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:shadow-lg transition-all duration-300 group"
+              className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white hover:bg-primary/90 hover:shadow-lg transition-all duration-300 group hover:scale-110"
             >
               <ArrowUp className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform duration-200" />
-            </motion.button>
+            </button>
           </div>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Bottom glow effect */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-teal-500 to-transparent opacity-50" />
+      {/* Bottom accent line */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-px bg-primary/30" />
     </footer>
   );
 };

@@ -17,7 +17,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer hover:opacity-[0.9] text-white text-sm font-medium"
+        className="cursor-pointer hover:opacity-[0.9] text-white text-md font-medium"
       >
         {item}
       </motion.p>
@@ -67,7 +67,7 @@ export const ProductItem = ({
 }) => {
   // Use 'to' if provided, otherwise fall back to 'href'
   const linkDestination = to || href;
-  
+
   return (
     <Link
       href={linkDestination} // If using Next.js Link
@@ -83,12 +83,8 @@ export const ProductItem = ({
         className="shrink-0 rounded-md shadow-2xl"
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-white">
-          {title}
-        </h4>
-        <p className="text-sm max-w-[10rem] text-neutral-300">
-          {description}
-        </p>
+        <h4 className="text-xl font-bold mb-1 text-white">{title}</h4>
+        <p className="text-sm max-w-[10rem] text-neutral-300">{description}</p>
       </div>
     </Link>
   );
@@ -120,7 +116,7 @@ export const HoveredLink = ({
     <Link
       href={to || href}
       {...rest}
-      className="text-neutral-200 hover:text-white text-sm font-medium transition-colors"
+      className="text-neutral-200 hover:text-white text-md font-medium transition-colors"
     >
       {children}
     </Link>

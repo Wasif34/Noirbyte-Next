@@ -6,17 +6,20 @@ import { cn } from "@/lib/util";
 export const BoxesCore = ({ className, ...rest }) => {
   const rows = new Array(150).fill(1);
   const cols = new Array(100).fill(1);
+
+  // Using your theme colors - these will automatically work with light/dark mode
   let colors = [
-    "#93c5fd",
-    "#f9a8d4",
-    "#86efac",
-    "#fde047",
-    "#fca5a5",
-    "#d8b4fe",
-    "#93c5fd",
-    "#a5b4fc",
-    "#c4b5fd",
+    "var(--primary)",
+    "var(--secondary)",
+    "var(--accent)",
+    "var(--thirdary)",
+    "var(--muted)",
+    "var(--primary)",
+    "var(--accent)",
+    "var(--secondary)",
+    "var(--thirdary)",
   ];
+
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
@@ -35,7 +38,7 @@ export const BoxesCore = ({ className, ...rest }) => {
       {rows.map((_, i) => (
         <motion.div
           key={`row` + i}
-          className="relative h-8 w-16 border-l border-slate-700"
+          className="relative h-8 w-16 border-l-2 border-border/30"
         >
           {cols.map((_, j) => (
             <motion.div
@@ -47,7 +50,7 @@ export const BoxesCore = ({ className, ...rest }) => {
                 transition: { duration: 2 },
               }}
               key={`col` + j}
-              className="relative h-8 w-16 border-t border-r border-slate-700"
+              className="relative h-8 w-16 border-t-2 border-r-2 border-border/30 bg-transparent hover:bg-opacity-80"
             >
               {j % 2 === 0 && i % 2 === 0 ? (
                 <svg
@@ -56,7 +59,7 @@ export const BoxesCore = ({ className, ...rest }) => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="pointer-events-none absolute -top-[14px] -left-[22px] h-6 w-10 stroke-[1px] text-slate-700"
+                  className="pointer-events-none absolute -top-[14px] -left-[22px] h-6 w-10 stroke-[1px] text-border/50"
                 >
                   <path
                     strokeLinecap="round"

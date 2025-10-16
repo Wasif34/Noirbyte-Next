@@ -1,19 +1,13 @@
 import { cn } from "@/lib/util";
 import {
-  IconAdjustmentsBolt,
-  IconCloud,
-  IconCpu,
-  IconCurrencyDollar,
-  IconDeviceMobileMessage,
-  IconEaseInOut,
-  IconHeart,
-  IconHelp,
-  IconLayoutDashboard,
-  IconLifebuoy,
-  IconRouteAltLeft,
-  IconShieldCheck,
   IconTerminal2,
+  IconCpu,
+  IconCloud,
+  IconLayoutDashboard,
+  IconDeviceMobileMessage,
   IconTimeline,
+  IconShieldCheck,
+  IconLifebuoy,
 } from "@tabler/icons-react";
 
 export function FeaturesSectionDemo() {
@@ -21,328 +15,186 @@ export function FeaturesSectionDemo() {
     {
       title: "Custom Software Development",
       description:
-        "From idea to execution — we craft scalable web and mobile apps tailored to your needs.",
+        "From idea to execution — we craft scalable web and mobile apps tailored to your unique business needs.",
       icon: <IconTerminal2 />,
-      color: "blue",
+      gradient: "primary",
     },
     {
       title: "AI-Powered Solutions",
       description:
-        "We integrate cutting-edge AI and machine learning to future-proof your digital products.",
+        "We integrate cutting-edge AI and machine learning to future-proof your digital products and automate workflows.",
       icon: <IconCpu />,
-      color: "indigo",
+      gradient: "primary",
     },
     {
       title: "Cloud & DevOps Expertise",
       description:
-        "Streamline your infrastructure with secure, automated, and efficient DevOps pipelines.",
+        "Streamline your infrastructure with secure, automated, and efficient DevOps pipelines on leading cloud platforms.",
       icon: <IconCloud />,
-      color: "cyan",
+      gradient: "primary",
     },
     {
       title: "End-to-End Project Ownership",
       description:
-        "From design to deployment, we handle every step with precision and accountability.",
+        "From design to deployment, we handle every step with precision, accountability, and unwavering attention to detail.",
       icon: <IconLayoutDashboard />,
-      color: "green",
+      gradient: "primary",
     },
     {
       title: "Cross-Platform Excellence",
       description:
-        "Deliver consistent experiences across web, iOS, and Android with modern, responsive designs.",
+        "Deliver consistent, beautiful experiences across web, iOS, and Android with modern, responsive designs.",
       icon: <IconDeviceMobileMessage />,
-      color: "purple",
+      gradient: "primary",
     },
     {
       title: "Agile & Transparent Workflow",
       description:
-        "Stay in the loop — we work in agile sprints with full visibility and regular updates.",
+        "Stay in the loop with agile sprints, full project visibility, regular updates, and collaborative development.",
       icon: <IconTimeline />,
-      color: "orange",
+      gradient: "primary",
     },
     {
       title: "Secure by Design",
       description:
-        "We build with best-in-class security practices to keep your data and users safe.",
+        "We build with industry-leading security practices and compliance standards to keep your data and users protected.",
       icon: <IconShieldCheck />,
-      color: "red",
+      gradient: "primary",
     },
     {
       title: "Ongoing Support & Maintenance",
       description:
-        "We don’t just ship and vanish. Count on us for continuous improvements and long-term support.",
+        "We don't just ship and vanish. Count on us for continuous improvements, updates, and long-term partnership.",
       icon: <IconLifebuoy />,
-      color: "pink",
+      gradient: "primary",
     },
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
-      {features.map((feature, index) => (
-        <Feature key={feature.title} {...feature} index={index} />
-      ))}
-    </div>
+    <section className="py-20 lg:py-32 bg-[#fdfff8] relative overflow-hidden">
+      {/* Background decorations designed for thirdary (#b7ce63) background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Darker accent circles for contrast on thirdary bg */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/8 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/8 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-background/8 rounded-full blur-3xl" />
+
+        {/* Additional overlay for better text contrast */}
+        <div className="absolute inset-0 bg-white/10 backdrop-blur-[1px]" />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-16 lg:mb-24">
+          <div className="inline-flex font-bevellierBold items-center gap-2 px-4 py-2 rounded-full bg-foreground backdrop-blur-sm border border-primary/30 text-thirdary text-lg mb-6 shadow-sm">
+            <span className="w-2 h-2 bg-thirdary rounded-full animate-pulse"></span>
+            Our Services
+          </div>
+          <h2
+            className="text-4xl md:text-5xl lg:text-6xl  mb-6 bg-primary bg-clip-text text-transparent drop-shadow-sm py-1"
+            style={{ fontFamily: "Bevellier-Regular, sans-serif" }}
+          >
+            Comprehensive Digital Solutions
+          </h2>
+          <p
+            className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed drop-shadow-sm"
+            style={{ fontFamily: "Bevellier-ExtraLight, sans-serif" }}
+          >
+            We deliver end-to-end technology solutions that transform ideas into
+            market-ready products. From AI integration to cloud architecture,
+            we've got you covered.
+          </p>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          {features.map((feature, index) => (
+            <Feature key={feature.title} {...feature} index={index} />
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-20 lg:mt-32">
+          <div className="bg-card/90 backdrop-blur-md border border-border/50 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto shadow-xl">
+            <h3
+              className="text-2xl md:text-3xl font-bold mb-4 text-foreground"
+              style={{ fontFamily: "Bevellier-Bold, sans-serif" }}
+            >
+              Ready to Transform Your Vision?
+            </h3>
+            <p
+              className="text-foreground/70 mb-8 text-lg"
+              style={{ fontFamily: "Bevellier-Regular, sans-serif" }}
+            >
+              Let's discuss how we can bring your project to life with our
+              expertise and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                className="px-8 py-4 bg-thirdary text-thirdary-foreground rounded-xl font-semibold hover:bg-thirdary/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-thirdary/25"
+                style={{ fontFamily: "Bevellier-Semibold, sans-serif" }}
+              >
+                Start Your Project
+              </button>
+              <button
+                className="px-8 py-4 bg-card/80 backdrop-blur-sm border border-border rounded-xl font-semibold text-foreground hover:bg-card/90 hover:scale-105 transition-all duration-300 shadow-md"
+                style={{ fontFamily: "Bevellier-Semibold, sans-serif" }}
+              >
+                View Our Work
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
-const Feature = ({ title, description, icon, index, color }) => {
-  const getColorClasses = (color) => {
-    const colorMap = {
-      blue: {
-        bg: "group-hover/feature:bg-blue-500/20",
-        border: "group-hover/feature:bg-blue-500",
-        icon: "group-hover/feature:text-blue-400",
-        title: "group-hover/feature:text-blue-300",
-      },
-      green: {
-        bg: "group-hover/feature:bg-green-500/20",
-        border: "group-hover/feature:bg-green-500",
-        icon: "group-hover/feature:text-green-400",
-        title: "group-hover/feature:text-green-300",
-      },
-      purple: {
-        bg: "group-hover/feature:bg-purple-500/20",
-        border: "group-hover/feature:bg-purple-500",
-        icon: "group-hover/feature:text-purple-400",
-        title: "group-hover/feature:text-purple-300",
-      },
-      cyan: {
-        bg: "group-hover/feature:bg-cyan-500/20",
-        border: "group-hover/feature:bg-cyan-500",
-        icon: "group-hover/feature:text-cyan-400",
-        title: "group-hover/feature:text-cyan-300",
-      },
-      orange: {
-        bg: "group-hover/feature:bg-orange-500/20",
-        border: "group-hover/feature:bg-orange-500",
-        icon: "group-hover/feature:text-orange-400",
-        title: "group-hover/feature:text-orange-300",
-      },
-      pink: {
-        bg: "group-hover/feature:bg-pink-500/20",
-        border: "group-hover/feature:bg-pink-500",
-        icon: "group-hover/feature:text-pink-400",
-        title: "group-hover/feature:text-pink-300",
-      },
-      yellow: {
-        bg: "group-hover/feature:bg-yellow-500/20",
-        border: "group-hover/feature:bg-yellow-500",
-        icon: "group-hover/feature:text-yellow-400",
-        title: "group-hover/feature:text-yellow-300",
-      },
-      red: {
-        bg: "group-hover/feature:bg-red-500/20",
-        border: "group-hover/feature:bg-red-500",
-        icon: "group-hover/feature:text-red-400",
-        title: "group-hover/feature:text-red-300",
-      },
-    };
-    return colorMap[color] || colorMap.blue;
-  };
-
-  const colorClasses = getColorClasses(color);
-
+const Feature = ({ title, description, icon, index, gradient }) => {
   return (
-    <div
-      className={cn(
-        "flex flex-col lg:border-r py-10 relative group/feature border-neutral-800",
-        (index === 0 || index === 4) && "lg:border-l border-neutral-800",
-        index < 4 && "lg:border-b border-neutral-800"
-      )}
-    >
-      {index < 4 && (
+    <div className="group relative">
+      {/* Card optimized for thirdary background */}
+      <div className="relative h-full bg-card/90 backdrop-blur-md border border-border/30 rounded-2xl p-6 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-primary/15 hover:border-primary/40 hover:bg-card/95 overflow-hidden">
+        {/* Gradient background on hover - more visible on thirdary */}
         <div
-          className={cn(
-            "opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-800 to-transparent pointer-events-none",
-            colorClasses.bg
-          )}
+          className={`absolute inset-0 opacity-0 group-hover:opacity-15 transition-opacity duration-500 bg-gradient-to-br ${gradient} rounded-2xl`}
         />
-      )}
-      {index >= 4 && (
-        <div
-          className={cn(
-            "opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-800 to-transparent pointer-events-none",
-            colorClasses.bg
-          )}
-        />
-      )}
-      <div
-        className={cn(
-          "mb-4 relative z-10 px-10 text-neutral-400 transition-colors duration-200",
-          colorClasses.icon
-        )}
-      >
-        {icon}
+
+        {/* Content */}
+        <div className="relative z-10">
+          {/* Icon */}
+          <div className="mb-6">
+            <div
+              className={`w-14 h-14 rounded-xl bg-${gradient} p-3 text-white shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/10`}
+            >
+              {icon}
+            </div>
+          </div>
+
+          {/* Title */}
+          <h3
+            className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300"
+            style={{ fontFamily: "Bevellier-Bold, sans-serif" }}
+          >
+            {title}
+          </h3>
+
+          {/* Description */}
+          <p
+            className="text-foreground/70 leading-relaxed group-hover:text-foreground/90 transition-colors duration-300"
+            style={{ fontFamily: "Bevellier-Regular, sans-serif" }}
+          >
+            {description}
+          </p>
+        </div>
+
+        {/* Decorative elements - adjusted for thirdary background */}
+        <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute bottom-4 left-4 w-8 h-8 bg-gradient-to-br from-secondary/15 to-primary/15 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+        {/* Additional glow effect for better visibility */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
-      <div className="text-lg font-bold mb-2 relative z-10 px-10">
-        <div
-          className={cn(
-            "absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-700 transition-all duration-200 origin-center",
-            colorClasses.border
-          )}
-        />
-        <span
-          className={cn(
-            "group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-100",
-            colorClasses.title
-          )}
-        >
-          {title}
-        </span>
-      </div>
-      <p className="text-sm text-neutral-300 max-w-xs relative z-10 px-10">
-        {description}
-      </p>
     </div>
   );
 };
-
-// import React from "react";
-// import { useId } from "react";
-
-// export function FeaturesSectionDemo() {
-//   return (
-//     <div className="py-20 lg:py-40">
-//       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto">
-//         {grid.map((feature, index) => (
-//           <div
-//             key={feature.title}
-//             className={`relative bg-gradient-to-b from-neutral-900 from-neutral-100 to-neutral-950 to-white p-6 rounded-3xl overflow-hidden group transition-all duration-300 hover:scale-105 ${getHoverColors(
-//               index
-//             )}`}
-//           >
-//             <Grid size={20} />
-//             <p className="text-base font-bold text-neutral-800 text-white relative z-20 group-hover:text-white transition-colors duration-300">
-//               {feature.title}
-//             </p>
-//             <p className="text-neutral-600 text-neutral-400 mt-4 text-base font-normal relative z-20 group-hover:text-neutral-200 transition-colors duration-300">
-//               {feature.description}
-//             </p>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// const getHoverColors = (index) => {
-//   const colors = [
-//     "hover:bg-gradient-to-br hover:from-blue-500 hover:to-blue-700", // Blue
-//     "hover:bg-gradient-to-br hover:from-green-500 hover:to-green-700", // Green
-//     "hover:bg-gradient-to-br hover:from-purple-500 hover:to-purple-700", // Purple
-//     "hover:bg-gradient-to-br hover:from-cyan-500 hover:to-cyan-700", // Cyan
-//     "hover:bg-gradient-to-br hover:from-orange-500 hover:to-orange-700", // Orange
-//     "hover:bg-gradient-to-br hover:from-pink-500 hover:to-pink-700", // Pink
-//     "hover:bg-gradient-to-br hover:from-yellow-500 hover:to-yellow-700", // Yellow
-//     "hover:bg-gradient-to-br hover:from-red-500 hover:to-red-700", // Red
-//   ];
-//   return colors[index % colors.length];
-// };
-
-// const grid = [
-//   {
-//     title: "HIPAA and SOC2 Compliant",
-//     description:
-//       "Our applications are HIPAA and SOC2 compliant, your data is safe with us, always.",
-//   },
-//   {
-//     title: "Automated Social Media Posting",
-//     description:
-//       "Schedule and automate your social media posts across multiple platforms to save time and maintain a consistent online presence.",
-//   },
-//   {
-//     title: "Advanced Analytics",
-//     description:
-//       "Gain insights into your social media performance with detailed analytics and reporting tools to measure engagement and ROI.",
-//   },
-//   {
-//     title: "Content Calendar",
-//     description:
-//       "Plan and organize your social media content with an intuitive calendar view, ensuring you never miss a post.",
-//   },
-//   {
-//     title: "Audience Targeting",
-//     description:
-//       "Reach the right audience with advanced targeting options, including demographics, interests, and behaviors.",
-//   },
-//   {
-//     title: "Social Listening",
-//     description:
-//       "Monitor social media conversations and trends to stay informed about what your audience is saying and respond in real-time.",
-//   },
-//   {
-//     title: "Customizable Templates",
-//     description:
-//       "Create stunning social media posts with our customizable templates, designed to fit your brand's unique style and voice.",
-//   },
-//   {
-//     title: "Collaboration Tools",
-//     description:
-//       "Work seamlessly with your team using our collaboration tools, allowing you to assign tasks, share drafts, and provide feedback in real-time.",
-//   },
-// ];
-
-// export const Grid = ({ pattern, size }) => {
-//   const p = pattern ?? [
-//     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
-//     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
-//     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
-//     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
-//     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
-//   ];
-//   return (
-//     <div className="pointer-events-none absolute left-1/2 top-0  -ml-20 -mt-2 h-full w-full [mask-image:linear-gradient(white,transparent)]">
-//       <div className=" bg-gray-500 absolute inset-0 bg-gradient-to-r  [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] from-zinc-900/30 from-zinc-100/30 to-zinc-300/30 to-zinc-900/30 opacity-100">
-//         <GridPattern
-//           width={size ?? 20}
-//           height={size ?? 20}
-//           x="-12"
-//           y="4"
-//           squares={p}
-//           className="absolute inset-0 h-full w-full  mix-blend-overlay fill-white/10 stroke-white/10 stroke-black/10 fill-black/10"
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export function GridPattern({ width, height, x, y, squares, ...props }) {
-//   const patternId = useId();
-
-//   return (
-//     <svg aria-hidden="true" {...props}>
-//       <defs>
-//         <pattern
-//           id={patternId}
-//           width={width}
-//           height={height}
-//           patternUnits="userSpaceOnUse"
-//           x={x}
-//           y={y}
-//         >
-//           <path d={`M.5 ${height}V.5H${width}`} fill="none" />
-//         </pattern>
-//       </defs>
-//       <rect
-//         width="100%"
-//         height="100%"
-//         strokeWidth={0}
-//         fill={`url(#${patternId})`}
-//       />
-//       {squares && (
-//         <svg x={x} y={y} className="overflow-visible">
-//           {squares.map(([x, y]) => (
-//             <rect
-//               strokeWidth="0"
-//               key={`${x}-${y}`}
-//               width={width + 1}
-//               height={height + 1}
-//               x={x * width}
-//               y={y * height}
-//             />
-//           ))}
-//         </svg>
-//       )}
-//     </svg>
-//   );
-// }
